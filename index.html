@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSense - Smart Organic Farming Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-colorful.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriSense</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#statistics">Statistics</a></li>
+                <li><a href="#ai-solution-impact">AI Impact</a></li>
+                <li><a href="#organic-farming">Organic Farming</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">AgriSense</h1>
+                <p class="hero-tagline">AI-Powered Smart Farming Assistant for Sustainable & Organic Agriculture</p>
+                <div class="hero-badges">
+                    <span class="badge">🌱 100% Organic Focus</span>
+                    <span class="badge">♻️ Sustainable Practices</span>
+                    <span class="badge">🤖 AI-Driven Insights</span>
+                </div>
+                <div class="team-info">
+                    <p><strong>Team Error</strong> | AgriSense</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section id="problem">
+        <div class="container">
+            <h2 class="section-title">The Problem</h2>
+            <div class="problem-grid">
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">⚠️</div>
+                    <h3>Lack of Real-Time Guidance</h3>
+                    <p>Farmers lack region-specific, real-time guidance tailored to their unique conditions and organic farming needs.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">📉</div>
+                    <h3>Static Schedules Cause Loss</h3>
+                    <p>Rigid farming schedules fail to adapt to changing conditions, leading to significant crop losses and resource waste.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">🌪️</div>
+                    <h3>Unpredictable Risks</h3>
+                    <p>Climate variations and pest threats are increasingly unpredictable, especially for chemical-free farming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics">
+        <div class="container">
+            <h2 class="section-title">Agricultural Losses: The Scale of the Problem</h2>
+            <p class="section-subtitle">
+                Understanding the magnitude of crop losses across India, Maharashtra, and the Marathwada region highlights the urgent need for intelligent farming solutions.
+            </p>
+
+            <!-- Statistics Cards -->
+            <div class="stats-cards-grid">
+                <div class="stat-card fade-in" data-color="red">
+                    <div class="stat-number">₹92,000 Cr</div>
+                    <div class="stat-label">Annual Crop Loss in India</div>
+                    <div class="stat-detail">Due to weather extremes & poor practices</div>
+                </div>
+                <div class="stat-card fade-in" data-color="orange">
+                    <div class="stat-number">35-40%</div>
+                    <div class="stat-label">Post-Harvest Losses</div>
+                    <div class="stat-detail">Across various crops nationwide</div>
+                </div>
+                <div class="stat-card fade-in" data-color="amber">
+                    <div class="stat-number">₹15,000 Cr</div>
+                    <div class="stat-label">Maharashtra Annual Loss</div>
+                    <div class="stat-detail">Weather events & water scarcity</div>
+                </div>
+                <div class="stat-card fade-in" data-color="deep-orange">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Marathwada Drought Impact</div>
+                    <div class="stat-detail">Severe crop failure in drought years</div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-container">
+                <div class="chart-box fade-in">
+                    <h3 class="chart-title">Crop Loss Comparison by Region (% of Total Production)</h3>
+                    <canvas id="regionLossChart"></canvas>
+                </div>
+
+                <div class="chart-box fade-in">
+                    <h3 class="chart-title">Major Causes of Crop Loss in Maharashtra</h3>
+                    <canvas id="causesChart"></canvas>
+                </div>
+
+                <div class="chart-box fade-in full-width">
+                    <h3 class="chart-title">Marathwada Region: Year-on-Year Crop Loss Trend</h3>
+                    <canvas id="marathwadaTrendChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Key Insights -->
+            <div class="insights-grid">
+                <div class="insight-card fade-in">
+                    <div class="insight-icon">🌡️</div>
+                    <h4>Temperature Extremes</h4>
+                    <p>Marathwada experiences temperature variations of 45°C+ in summer, causing 25-30% yield reduction</p>
+                </div>
+                <div class="insight-card fade-in">
+                    <div class="insight-icon">💧</div>
+                    <h4>Water Scarcity</h4>
+                    <p>70% of Marathwada is rain-dependent, leading to severe losses during drought years</p>
+                </div>
+                <div class="insight-card fade-in">
+                    <div class="insight-icon">🐛</div>
+                    <h4>Pest Outbreaks</h4>
+                    <p>Maharashtra loses ₹3,500 Cr annually to pest attacks, with Marathwada being highly vulnerable</p>
+                </div>
+                <div class="insight-card fade-in">
+                    <div class="insight-icon">📉</div>
+                    <h4>Economic Impact</h4>
+                    <p>Over 12,000 farmer suicides in Maharashtra's drought-prone regions in the last decade</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Solution Impact -->
+    <section id="ai-solution-impact">
+        <div class="container">
+            <h2 class="section-title">How AgriSense AI Beats Agricultural Losses</h2>
+            <p class="section-subtitle">
+                Our AI-powered solution directly tackles each major cause of crop loss with intelligent, real-time interventions
+            </p>
+
+            <!-- Solution Impact Grid -->
+            <div class="solution-impact-grid">
+                <div class="impact-solution-card fade-in">
+                    <div class="impact-problem">
+                        <div class="impact-icon">🌧️</div>
+                        <h4>Problem: Drought & Water Scarcity (35% losses)</h4>
+                        <p>Marathwada's 70% rain-dependent farming faces severe water shortage</p>
+                    </div>
+                    <div class="impact-arrow">→</div>
+                    <div class="impact-ai-solution">
+                        <div class="solution-header">
+                            <div class="impact-icon-ai">🤖</div>
+                            <h4>AI Solution</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Predictive irrigation scheduling</strong> based on soil moisture sensors</li>
+                            <li><strong>Drought-resistant crop recommendations</strong> for water-scarce regions</li>
+                            <li><strong>Water conservation alerts</strong> before drought periods</li>
+                            <li><strong>Micro-irrigation optimization</strong> reducing water usage by 40%</li>
+                        </ul>
+                        <div class="impact-result">Expected Reduction: 60-70% of drought-related losses</div>
+                    </div>
+                </div>
+
+                <div class="impact-solution-card fade-in">
+                    <div class="impact-problem">
+                        <div class="impact-icon">☔</div>
+                        <h4>Problem: Unseasonal Rainfall (22% losses)</h4>
+                        <p>Sudden weather changes destroy crops during critical growth stages</p>
+                    </div>
+                    <div class="impact-arrow">→</div>
+                    <div class="impact-ai-solution">
+                        <div class="solution-header">
+                            <div class="impact-icon-ai">🤖</div>
+                            <h4>AI Solution</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Real-time weather monitoring</strong> with 7-day accurate forecasts</li>
+                            <li><strong>Automatic irrigation cutoff</strong> before heavy rainfall</li>
+                            <li><strong>Drainage improvement alerts</strong> to prevent waterlogging</li>
+                            <li><strong>Harvest timing optimization</strong> to avoid rain damage</li>
+                        </ul>
+                        <div class="impact-result">Expected Reduction: 50-65% of weather-related losses</div>
+                    </div>
+                </div>
+
+                <div class="impact-solution-card fade-in">
+                    <div class="impact-problem">
+                        <div class="impact-icon">🐛</div>
+                        <h4>Problem: Pest & Diseases (18% losses)</h4>
+                        <p>₹3,500 Cr lost annually to pest attacks in Maharashtra</p>
+                    </div>
+                    <div class="impact-arrow">→</div>
+                    <div class="impact-ai-solution">
+                        <div class="solution-header">
+                            <div class="impact-icon-ai">🤖</div>
+                            <h4>AI Solution</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Early pest detection</strong> using image recognition AI</li>
+                            <li><strong>Disease prediction models</strong> based on weather & crop stage</li>
+                            <li><strong>Organic pesticide recommendations</strong> using neem, garlic sprays</li>
+                            <li><strong>Preventive action alerts</strong> 5-7 days before outbreaks</li>
+                        </ul>
+                        <div class="impact-result">Expected Reduction: 70-80% of pest-related losses</div>
+                    </div>
+                </div>
+
+                <div class="impact-solution-card fade-in">
+                    <div class="impact-problem">
+                        <div class="impact-icon">🌡️</div>
+                        <h4>Problem: Temperature Extremes (12% losses)</h4>
+                        <p>Marathwada's 45°C+ summers cause 25-30% yield reduction</p>
+                    </div>
+                    <div class="impact-arrow">→</div>
+                    <div class="impact-ai-solution">
+                        <div class="solution-header">
+                            <div class="impact-icon-ai">🤖</div>
+                            <h4>AI Solution</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Heat stress monitoring</strong> with crop-specific thresholds</li>
+                            <li><strong>Natural mulching recommendations</strong> using straw, leaves</li>
+                            <li><strong>Increased irrigation schedules</strong> automatically triggered</li>
+                            <li><strong>Frost protection alerts</strong> with timing for preventive irrigation</li>
+                        </ul>
+                        <div class="impact-result">Expected Reduction: 55-70% of temperature-related losses</div>
+                    </div>
+                </div>
+
+                <div class="impact-solution-card fade-in">
+                    <div class="impact-problem">
+                        <div class="impact-icon">🌱</div>
+                        <h4>Problem: Poor Soil Health (8% losses)</h4>
+                        <p>Nutrient depletion and soil degradation reduce productivity</p>
+                    </div>
+                    <div class="impact-arrow">→</div>
+                    <div class="impact-ai-solution">
+                        <div class="solution-header">
+                            <div class="impact-icon-ai">🤖</div>
+                            <h4>AI Solution</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Soil health monitoring</strong> with NPK level tracking</li>
+                            <li><strong>Organic fertilization plans</strong> using compost, vermicompost</li>
+                            <li><strong>Crop rotation suggestions</strong> to restore soil nutrients</li>
+                            <li><strong>Green manure recommendations</strong> for long-term health</li>
+                        </ul>
+                        <div class="impact-result">Expected Reduction: 65-75% of soil-related losses</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Impact Section -->
+            <div class="overall-impact-box fade-in">
+                <h3>📈 Overall Impact Projection for Marathwada Region</h3>
+                <div class="impact-stats-grid">
+                    <div class="impact-stat">
+                        <div class="impact-stat-number">45% → 15%</div>
+                        <div class="impact-stat-label">Crop Loss Reduction</div>
+                        <div class="impact-stat-detail">From 45% to projected 15% with AI adoption</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-stat-number">₹4,000+ Cr</div>
+                        <div class="impact-stat-label">Annual Savings</div>
+                        <div class="impact-stat-detail">Potential economic benefit for Marathwada farmers</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-stat-number">6.5L Farmers</div>
+                        <div class="impact-stat-label">Lives Improved</div>
+                        <div class="impact-stat-detail">Direct impact on farming families in the region</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-stat-number">40%</div>
+                        <div class="impact-stat-label">Yield Increase</div>
+                        <div class="impact-stat-detail">Average productivity improvement with AI guidance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organic Farming Section -->
+    <section id="organic-farming">
+        <div class="container">
+            <h2 class="section-title">Natural & Organic Farming Focus</h2>
+            <p class="section-subtitle">
+                AgriSense promotes sustainable agriculture through natural fertilizers, organic pest control, and chemical-free farming practices
+            </p>
+
+            <div class="organic-features-grid">
+                <div class="organic-card fade-in">
+                    <div class="organic-icon">🌿</div>
+                    <h3>Natural Fertilizers</h3>
+                    <div class="organic-content">
+                        <h4>AI-Recommended Organic Solutions:</h4>
+                        <ul>
+                            <li><strong>Vermicompost:</strong> Rich in NPK, beneficial microorganisms, and humus</li>
+                            <li><strong>Farm Yard Manure (FYM):</strong> Cow dung compost for soil enrichment</li>
+                            <li><strong>Green Manure:</strong> Leguminous crops like dhaincha, sunhemp for nitrogen fixation</li>
+                            <li><strong>Biofertilizers:</strong> Rhizobium, Azotobacter, PSB for nutrient uptake</li>
+                            <li><strong>Compost Tea:</strong> Liquid organic fertilizer for foliar application</li>
+                            <li><strong>Bone Meal & Neem Cake:</strong> Slow-release organic nutrients</li>
+                        </ul>
+                        <div class="benefit-tag">Benefits: Improves soil structure, water retention, and microbial activity</div>
+                    </div>
+                </div>
+
+                <div class="organic-card fade-in">
+                    <div class="organic-icon">🐞</div>
+                    <h3>Organic Pest Control</h3>
+                    <div class="organic-content">
+                        <h4>Chemical-Free Pest Management:</h4>
+                        <ul>
+                            <li><strong>Neem Oil Spray:</strong> Natural insecticide against aphids, whiteflies, mites</li>
+                            <li><strong>Panchagavya:</strong> Cow-based organic formulation for pest resistance</li>
+                            <li><strong>Garlic-Chili Spray:</strong> Homemade repellent for various insects</li>
+                            <li><strong>Bordeaux Mixture:</strong> Organic fungicide for disease control</li>
+                            <li><strong>Companion Planting:</strong> Marigold, basil, mint to repel pests naturally</li>
+                            <li><strong>Beneficial Insects:</strong> Ladybugs, lacewings for biological control</li>
+                        </ul>
+                        <div class="benefit-tag">Benefits: No chemical residue, safe for soil and environment</div>
+                    </div>
+                </div>
+
+                <div class="organic-card fade-in">
+                    <div class="organic-icon">♻️</div>
+                    <h3>Sustainable Practices</h3>
+                    <div class="organic-content">
+                        <h4>Eco-Friendly Farming Methods:</h4>
+                        <ul>
+                            <li><strong>Crop Rotation:</strong> Alternating crops to prevent soil depletion</li>
+                            <li><strong>Mulching:</strong> Organic mulch (straw, leaves) for moisture retention</li>
+                            <li><strong>Water Harvesting:</strong> Rainwater collection and efficient irrigation</li>
+                            <li><strong>Zero Tillage:</strong> Minimal soil disturbance for carbon sequestration</li>
+                            <li><strong>Intercropping:</strong> Mixed cropping for biodiversity and pest control</li>
+                            <li><strong>Composting:</strong> On-farm waste conversion to nutrient-rich compost</li>
+                        </ul>
+                        <div class="benefit-tag">Benefits: Reduces costs, improves soil health, climate-resilient</div>
+                    </div>
+                </div>
+
+                <div class="organic-card fade-in">
+                    <div class="organic-icon">🌾</div>
+                    <h3>Soil Health Enhancement</h3>
+                    <div class="organic-content">
+                        <h4>Natural Soil Improvement:</h4>
+                        <ul>
+                            <li><strong>Cover Cropping:</strong> Growing crops like clover to protect and enrich soil</li>
+                            <li><strong>Biochar Application:</strong> Charcoal-based soil amendment for carbon storage</li>
+                            <li><strong>Mycorrhizal Fungi:</strong> Beneficial fungi for nutrient absorption</li>
+                            <li><strong>pH Balancing:</strong> Using lime or sulfur naturally</li>
+                            <li><strong>Organic Matter Addition:</strong> Regular compost and manure application</li>
+                            <li><strong>Earthworm Farming:</strong> Promoting natural soil aeration</li>
+                        </ul>
+                        <div class="benefit-tag">Benefits: Long-term fertility, reduced erosion, carbon sequestration</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organic Success Metrics -->
+            <div class="organic-success-box fade-in">
+                <h3>🎯 Organic Farming Benefits with AgriSense AI</h3>
+                <div class="success-metrics">
+                    <div class="metric-item">
+                        <div class="metric-value">50-60%</div>
+                        <div class="metric-label">Cost Reduction</div>
+                        <p>By eliminating chemical inputs</p>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">30-40%</div>
+                        <div class="metric-label">Premium Pricing</div>
+                        <p>For certified organic produce</p>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">70-80%</div>
+                        <div class="metric-label">Chemical-Free</div>
+                        <p>Safe for consumers and environment</p>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">3-5 Years</div>
+                        <div class="metric-label">Soil Recovery</div>
+                        <p>Improved fertility and structure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Continue with other sections... -->
+    <section id="solution">
+        <div class="container">
+            <h2 class="section-title">Proposed Solution</h2>
+            <div class="solution-box fade-in">
+                <h3>AI-Based Smart Farming Assistant</h3>
+                <p class="solution-description">Provides real-time, adaptive crop guidance supporting sustainable, organic, and practical farming decisions</p>
+                <div class="solution-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🎯</span>
+                        <strong>Real-Time</strong>
+                        <p>Instant adaptive recommendations</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🌱</span>
+                        <strong>Organic Focus</strong>
+                        <p>Chemical-free farming practices</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">📊</span>
+                        <strong>Data-Driven</strong>
+                        <p>Evidence-based decisions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">Key Features/Future Updates</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Crop Lifecycle Management</h3>
+                    <p>Complete guidance from seed to harvest with organic practices</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🌦</div>
+                    <h3>Weather-Responsive Actions</h3>
+                    <p>Adapts recommendations based on real-time weather patterns</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🐛</div>
+                    <h3>Pest & Disease Alerts</h3>
+                    <p>Early detection with organic pest control solutions</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📍</div>
+                    <h3>Location-Based Recommendations</h3>
+                    <p>Customized for your specific region and soil type</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔁</div>
+                    <h3>Continuous Context Tracking</h3>
+                    <p>Learns and adapts to your farm's unique history</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Conclusion -->
+    <section class="conclusion">
+        <div class="container">
+            <div class="conclusion-content">
+                <h2 class="section-title">Conclusion</h2>
+                <p class="conclusion-text">
+                    AgriSense represents the future of farming - combining artificial intelligence with agricultural expertise and organic practices to create a smarter, more sustainable, and more profitable farming ecosystem.
+                </p>
+                <div class="conclusion-grid">
+                    <div class="conclusion-item fade-in">
+                        <div class="conclusion-icon">✓</div>
+                        <h3>Better Yield</h3>
+                        <p>Smart, adaptive farming for optimized organic crop production</p>
+                    </div>
+                    <div class="conclusion-item fade-in">
+                        <div class="conclusion-icon">✓</div>
+                        <h3>Reduced Risk</h3>
+                        <p>Minimize resource waste and prevent crop losses naturally</p>
+                    </div>
+                    <div class="conclusion-item fade-in">
+                        <div class="conclusion-icon">✓</div>
+                        <h3>Sustainable Future</h3>
+                        <p>AI-powered organic agriculture for generations to come</p>
+                    </div>
+                </div>
+                <div class="conclusion-footer">
+                    <p><strong>Team Error</strong> | AgriSense</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
