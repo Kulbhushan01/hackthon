@@ -1052,6 +1052,47 @@ section {
     font-weight: 800;
 }
 
+.conclusion-footer p:first-child {
+    font-weight: 800;
+}
+
+/* Team Members Grid */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-4);
+    border-radius: var(--radius);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.team-member:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.member-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: var(--space-1);
+    color: var(--text-light);
+}
+
+.member-email {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    color: var(--green-light);
+    word-break: break-word;
+}
+
 /* ========================
    Animations
    ======================== */
